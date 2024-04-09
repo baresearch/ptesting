@@ -26,7 +26,7 @@ const invariant = require("tiny-invariant");
 const API_KEY = "";
 
 // Do not change these
-const SELECTED_PROXY_PROVIDER_TO_ANALYZE = "RAYOBYTE"
+const SELECTED_PROXY_PROVIDER_TO_ANALYZE = "RYB"
 const ANALYZER_API_NAME = "IPQS"
 
 
@@ -325,9 +325,9 @@ function extractIpAddress(string) {
 }
 
 
-function returnRayoByteProxies() {
-    // const filePath = 'RAYOBYTE_LATESTPROXIES_March8.txt';
-    const filePath = 'test.txt';
+function returnProxies() {
+    const filePath = 'LATESTPROXIES_March8.txt';
+    // const filePath = 'test.txt';
     const ipData = parseIPFile(filePath);
     console.log(ipData);
     return ipData;
@@ -374,7 +374,7 @@ function parseIPFile(filePath) {
 async function ipAnalyzer() {
 
     // 1.  Get the IP addresses that we are interested in
-    const proxyProviderIPs = returnRayoByteProxies();
+    const proxyProviderIPs = returnProxies();
     console.log("🚀 ~ file: ipqs.js:295 ~ ipAnalyzer ~ proxyProviderIPs:", proxyProviderIPs)
     // return true;
     
